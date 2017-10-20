@@ -1,4 +1,4 @@
-# DPL
+# Denver Public Library (DPL)
 
 ## Preparation
 
