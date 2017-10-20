@@ -109,7 +109,7 @@ For this iteration, assume dpl is loaded with data from iteration 3.
 # => [#<Book:0x007f98a9c6ace8 @author_last_name="Bronte"...>, #<Book:0x007fb410ea56e8 @author_last_name="Bronte"...>, #<Book:0x007fb410e8e1f0 @author_last_name="Lee"...> ]
 ```
 
-### Iteration 5 Library -find a favorite author
+### Iteration 5 Library - search
 For this iteration, assume dpl is loaded with data from iteration 3.
 
 ```ruby
@@ -117,6 +117,11 @@ For this iteration, assume dpl is loaded with data from iteration 3.
 # => {
 #     "Jane Eyre" => #<Book:0x007f98a9c6ace8 @author_last_name="Bronte" @title="Jane Eyre"...>,
 #     "Villette"  => #<Book:0x007fb410ea56e8 @author_last_name="Bronte" @title="Villette"...>
+#    }
+
+> dpl.find_by_publication_date("1960")
+# => {
+#     "To Kill a Mockingbird" => #<Book:0x007fb410e8e1f0 @publication_date="1960"...>
 #    }
 
 ```
