@@ -9,7 +9,7 @@
 
 ## Tasks
 
-Today we are going to build a system for a library to keep track of its books and their authors.  
+Today we are going to build a system for a library to keep track of its books and their authors.
 
 ### Iteration 1 Books
 
@@ -19,7 +19,7 @@ Today we are going to build a system for a library to keep track of its books an
 > require './lib/book'
 # => true
 
-> mockingbird = Book.new({author_first_name: "Harper", author_last_name: "Lee", title: "To Kill a Mockingbird", publication_date: "July 11, 1960"})
+> book = Book.new({author_first_name: "Harper", author_last_name: "Lee", title: "To Kill a Mockingbird", publication_date: "July 11, 1960"})
 # => #<Book:0x007f98a9c6ace8 ...>
 
 > book.author_first_name
@@ -35,7 +35,7 @@ Today we are going to build a system for a library to keep track of its books an
 # => "1960"
 ```
 
-### Iteration 2 Authors  
+### Iteration 2 Authors
 
 Currently we have the beginnings of an Author class. Add to that class so that it can respond to the following interaction pattern:
 
@@ -49,13 +49,13 @@ Currently we have the beginnings of an Author class. Add to that class so that i
 > charlotte_bronte.books
 # => []
 
-> charlotte_bronte.write_book("Jane Eyre", "October 16, 1847")
+> charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
 # => #<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="1847", @title="Jane Eyre">
 
 > charlotte_bronte.books
 # => [#<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="10/16/1847", @title="Jane Eyre">]
 
-> charlotte_bronte.write_book("Villette", "1853")
+> charlotte_bronte.add_book("Villette", "1853")
 # => #<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="1847", @title="Villette">
 
 > charlotte_bronte.books
