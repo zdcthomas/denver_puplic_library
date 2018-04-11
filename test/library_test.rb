@@ -61,7 +61,7 @@ class LibraryTest < Minitest::Test
   end 
 
   def test_find_by_author
-    ibrary = Library.new
+    library = Library.new
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     jane_eyre = charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
     villette  = charlotte_bronte.add_book("Villette", "1853")
@@ -72,14 +72,14 @@ class LibraryTest < Minitest::Test
     library.add_to_collection(jane_eyre)
     actual = library.find_by_author("Charlotte Bronte")
     expected = {
-            "Jane Eyre" => jane_eyre
+            "Jane Eyre" => jane_eyre,
             "Villette"  => villette
             }
     assert_equal expected, actual
   end
 
   def test_find_by_author
-    ibrary = Library.new
+    library = Library.new
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     jane_eyre = charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
     villette  = charlotte_bronte.add_book("Villette", "1853")
@@ -91,5 +91,5 @@ class LibraryTest < Minitest::Test
     actual = library.find_by_publication_date("1960")
     expected = {"To Kill a Mockingbird" => mockingbird}
     assert_equal expected, actual
-  end 
+  end
 end
