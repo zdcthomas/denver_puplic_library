@@ -35,4 +35,30 @@ class LibraryTest < Minitest::Test
     assert_equal [jane_eyre, villette, mockingbird], library.books
   end
 
+  def test_include_method
+    library = Library.new
+    charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
+    villette  = charlotte_bronte.add_book("Villette", "1853")
+    harper_lee  = Author.new({first_name: "Harper", last_name: "Lee"})
+    mockingbird = harper_lee.add_book("To Kill a Mockingbird", "July 11, 1960")
+    library.add_to_collection(mockingbird)
+    assert library.include?(mockingbird)
+    refute library.include?(villete)
+  end 
+
+  def test_card_catalogue_method
+    ibrary = Library.new
+    charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
+    jane_eyre = charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
+    villette  = charlotte_bronte.add_book("Villette", "1853")
+    harper_lee  = Author.new({first_name: "Harper", last_name: "Lee"})
+    mockingbird = harper_lee.add_book("To Kill a Mockingbird", "July 11, 1960")
+    library.add_to_collection(mockingbird)
+    library.add_to_collection(villette)
+    library.add_to_collection(jane_eyre)
+    expected = [jane_eyre, villette, mockingbird]
+    assert_equal expected, library.card_catalogue
+
+
+  end 
 end
