@@ -1,5 +1,5 @@
 require './test/test_helper'
-
+require_relative '../lib/book'
 class BookTest < Minitest::Test
 
   def test_it_exists
@@ -28,7 +28,7 @@ class BookTest < Minitest::Test
   assert_equal "Lee", actual
   end
 
-  def test_author_last_name
+  def test_title
     book = Book.new({author_first_name: "Harper",
                      author_last_name: "Lee",
                      title: "To Kill a Mockingbird",
@@ -37,7 +37,7 @@ class BookTest < Minitest::Test
   assert_equal "To Kill a Mockingbird", actual
   end
 
-  def test_author_last_name
+  def test_publication_date
     book = Book.new({author_first_name: "Harper",
                      author_last_name: "Lee",
                      title: "To Kill a Mockingbird",
