@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative './book'
-require 'pry'
 
 # stores books, and allows for searches on those books
 class Library
