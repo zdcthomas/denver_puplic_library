@@ -9,7 +9,7 @@ class Author
   end
 
   def add_book(title, publication_date)
-    book_data = {:title => title, 
+    book_data = {:title => title,
                  :publication_date => publication_date,
                  :author_first_name => @author_data[:author_first_name],
                  :author_last_name => @author_data[:author_last_name]}
