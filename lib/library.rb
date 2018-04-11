@@ -1,3 +1,5 @@
+require_relative './book'
+require 'pry'
 class Library
 
   attr_reader :books
@@ -13,4 +15,8 @@ class Library
     @books.include?(book)
   end
 
+  def card_catalogue
+    # binding.pry
+   @books.sort_by{|book| book.author_last_name}
+  end 
 end

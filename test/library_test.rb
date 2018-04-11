@@ -56,7 +56,7 @@ class LibraryTest < Minitest::Test
     library.add_to_collection(mockingbird)
     library.add_to_collection(villette)
     library.add_to_collection(jane_eyre)
-    expected = [jane_eyre, villette, mockingbird]
+    expected = [villette, jane_eyre, mockingbird]
     assert_equal expected, library.card_catalogue
 
 
