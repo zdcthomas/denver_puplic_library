@@ -43,11 +43,11 @@ class LibraryTest < Minitest::Test
     mockingbird = harper_lee.add_book("To Kill a Mockingbird", "July 11, 1960")
     library.add_to_collection(mockingbird)
     assert library.include?(mockingbird)
-    refute library.include?(villete)
+    refute library.include?(villette)
   end 
 
   def test_card_catalogue_method
-    ibrary = Library.new
+    library = Library.new
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     jane_eyre = charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
     villette  = charlotte_bronte.add_book("Villette", "1853")
