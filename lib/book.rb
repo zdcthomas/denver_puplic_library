@@ -1,5 +1,7 @@
-class Book
+# frozen_string_literal: true
 
+# holds attributes of book object
+class Book
   attr_reader :author_first_name,
               :author_last_name,
               :title,
@@ -11,8 +13,5 @@ class Book
     @author_last_name = data[:author_last_name]
     @title = data[:title]
     @publication_date = data[:publication_date]
-  end 
-
-
-
+  end
 end

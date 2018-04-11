@@ -1,6 +1,9 @@
-require_relative './book'
-class Author
+# frozen_string_literal: true
 
+require_relative './book'
+
+# stores data about authors
+class Author
   attr_reader :books
 
   def initialize(author_data)
