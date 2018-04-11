@@ -1,5 +1,7 @@
 require './test/test_helper'
 require_relative '../lib/library'
+require_relative '../lib/book'
+require_relative '../lib/author'
 
 class LibraryTest < Minitest::Test
 
